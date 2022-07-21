@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索结果</title>
+    <!-- 新 Bootstrap5 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
+    <script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <!--  popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+    <!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/jobsearchresult.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/jobsearchresult.js"></script>
+</head>
+
+<body>
+    <div class="superdiv">
+        <div class="top_top">
+          <nav class="navbar navbar-expand-md bg-dark navbar-dark justify-content-center" >  
+    
+          <div class="top_left">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="homepage.html">首页</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="jobsearchresult.html">职位搜索</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="clickcompany.html">数据分析</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="basicinformation.html">个人信息</a>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown">
+                          账号管理
+                      </a>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="login.html">登录</a>
+                          <a class="dropdown-item" href="registered.html">注册</a>
+
+                      </div>
+                  </li>
+
+
+              </ul>
+          </div>
+    </nav>
+    <div>
+
+    </div>      
+    </div>
+  
+        <!-- 搜索栏 -->
+        <div class="search">
+            <div class="searchMain clear">
+                <div class="top">
+                    <div class="zw">职位</div>
+                </div>
+                <input type="text" placeholder="请输入关键字" class="sousuo" id="searchInput">
+                <input type="button" value="搜索" class="button" id="searchButton">
+            </div>
+        </div>
+        <div class="all">
+            <div class="left-5-1">
+                <!-- 要求 -->
+                <div class="require">
+                    <div class="requireMain">
+                        <dl>
+                            <dt>公司地点：</dt>
+                            <dd><a class="first  city" index="全国">全国</a></dd>
+                            <dd><a class="first2 city"index="上海">上海</a></dd>
+                            <dd><a class="first2 city"index="深圳">深圳</a></dd>
+                            <dd><a class="first2 city"index="广州">广州</a></dd>
+                            <dd><a class="first2 city"index="杭州">杭州</a></dd>
+                            <dd><a class="first2 city"index="成都">成都</a></dd>
+                            <dd><a class="first2 city"index="南京">南京</a></dd>
+                            <dd><a class="first2 city"index="武汉">武汉</a></dd>
+                            <dd><a class="first2 city"index="西安">西安</a></dd>
+                            <dd><a class="first2 city"index="厦门">厦门</a></dd>
+                            <dd><a class="first2 city"index="长沙">长沙</a></dd>
+                            <dd><a class="first2 city"index="苏州">苏州</a></dd>
+                            <dd><a class="first2 city"index="天津">天津</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>工作经验：</dt>
+                            <dd class="pretermission jobExp" index="不限"><a >不限</a></dd>
+                            <dd><a  class="first2 jobExp" index="应届生">应届生</a></dd>
+                            <dd><a  class="first2 jobExp" index="在校生">在校生</a></dd>
+                            <dd><a  class="first2 jobExp" index="1-3年">1-3年</a></dd>
+                            <dd><a  class="first2 jobExp" index="3-5年">3-5年</a></dd>
+                            <dd><a  class="first2 jobExp" index="5-10年">5-10年</a></dd>
+                            <dd><a  class="first2 jobExp" index="10年以上">10年以上</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>学历要求：</dt>
+                            <dd class="pretermission edu" index="不限"><a>不限</a></dd>
+                            <dd><a  class="first2 edu" index="大专">大专</a></dd>
+                            <dd><a  class="first2 edu" index="本科">本科</a></dd>
+                            <dd><a  class="first2 edu" index="硕士">硕士</a></dd>
+                            <dd><a  class="first2 edu" index="博士">博士</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>薪资水平：</dt>
+                            <dd class="pretermission salary" index="不限"><a >不限</a></dd>
+                            <dd><a  class="first2 salary" index="5k">5k-10k</a></dd>
+                            <dd><a  class="first2 salary" index="10k">10k-20k</a></dd>
+                            <dd><a  class="first2 salary" index="20k">20k-40k</a></dd>
+                            <dd><a  class="first2 salary" index="40k">40k以上</a></dd>
+                        </dl>
+                    </div>
+
+
+                </div>
+                 
+
+            </ul>          
+        </div>
+        <!-- 24小时热门 -->
+        <div class="section1">
+            <div class="box">
+                <a href="#" target="_black" class="remen">   &nbsp;</a>
+            </div>
+            <div class="tishi">
+                <a href="#"> </a>
+            </div>
+            <ul id="inf">
+            </ul>
+        </div>
+        </div>
+        <div class="lastbottom">
+            <div class="bottomMian">
+                <p class="z1">©2022 春酣网</p>
+                <a >随便打一个号吧-2</a>
+                <a  class="jg">春酣网安备 20220616号</a>
+            </div>
+        </div>
+        <a href="#" class="fj">
+        </a>
+    </div>
+</body>
+<script type="text/javascript">
+        $("#searchButton").click(function (){
+            searchResult();
+        })
+        $("#inf").on("click",".k1",function (){
+            var jobId = $(this).attr("index");
+            setCookie("jobId",jobId);
+            location.href = "positiondetail.html";
+        })
+
+
+
+</script>
+</html>

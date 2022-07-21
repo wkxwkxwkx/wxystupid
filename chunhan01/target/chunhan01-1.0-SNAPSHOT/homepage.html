@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <!-- 新 Bootstrap5 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
+    <script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <!--  popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+    <!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/homepage.js"></script>
+    <script src="js/cookie.js"></script>
+    <script>
+        JobRecommendation();
+    </script>
+</head>
+<body>
+    <div class="superdiv">
+        <div class="top_top">
+          <nav class="navbar navbar-expand-md bg-dark navbar-dark justify-content-center" >  
+    
+          <div class="top_left">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="homepage.html">首页</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="jobsearchresult.html">职位搜索</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="clickcompany.html">数据分析</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="basicinformation.html">个人信息</a>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown">
+                          账号管理
+                      </a>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="login.html">登录</a>
+                          <a class="dropdown-item" href="registered.html">注册</a>
+
+                      </div>
+                  </li>
+              </ul>
+          </div>
+
+    </nav>
+    <div>
+
+    </div>      
+    </div>
+        <!-- 搜索栏 -->
+        <div class="search">
+            <div class="searchMain">
+                <input type="text" placeholder="超级雇主招聘节" class="sousuo" id="globalSearch">
+                <input type="button" value="搜索" class="button">
+            </div>
+        </div>
+        <!-- 主体 -->
+        <!-- 轮播图 -->
+        <div class="SupDiv2">
+        <div class="carousrl">
+            <div class="wenzi">
+                <dl class="first">
+                    <dt>技术</dt>
+                    <dd><a href="#">Java</a></dd>
+                    <dd><a href="#">PHP</a></dd>
+                    <dd><a href="#">C++</a></dd>
+                    <dd><a href="#">区块链</a></dd>
+                    <span>&gt;</span>
+                </dl>
+                <dl>
+                    <dt>产品</dt>
+                    <dd><a href="#">产品总监</a></dd>
+                    <dd><a href="#">产品经理</a></dd>
+                    <span>&gt;</span>
+                </dl>
+                <dl>
+                    <dt>设计</dt>
+                    <dd><a href="#">UI设计师</a></dd>
+                    <dd><a href="#">交互技术</a></dd>
+                    <dd><a href="#">网页设计师</a></dd>
+                    <span>&gt;</span>
+                </dl>
+                <dl>
+                    <dt>运营</dt>
+                    <dd><a href="#">新媒体运营</a></dd>
+                    <dd><a href="#">编辑</a></dd>
+                    <dd><a href="#">数据运营</a></dd>
+                    <span>&gt;</span>
+                </dl>
+                <dl>
+                    <dt>市场</dt>
+                    <dd><a href="#">市场营销</a></dd>
+                    <dd><a href="#">市场推广</a></dd>
+                    <dd><a href="#">市场策划</a></dd>
+                    <span>&gt;</span>
+                </dl>
+                <dl>
+                    <dt>游戏</dt>
+                    <dd><a href="#">小游戏开发</a></dd>
+                    <dd><a href="#">U3D</a></dd>
+                    <dd><a href="#">游戏策划</a></dd>
+                    <span>&gt;</span>
+                </dl>
+            </div>
+            <div class="lb_banner">
+                <ul class="pic">
+                    <li><img src="https://www.lgstatic.com/i/image6/M00/82/A6/Cgp9HWJ91laAG1LAAAC10a_P1R0922.jpg" alt=""></li>
+                    <li><img src="https://www.lgstatic.com/10/e56bed1971ff4b0ebdafa1d58ed1c0c6.jpg" alt=""></li>
+
+                </ul>
+                <ul class="dot">
+                </ul>
+                <div class="btn prev"></div>
+                <div class="btn next"></div>
+            </div>
+        </div>
+    </div>
+        <!-- 24小时热门 -->
+        <div class="section1">
+            <div class="box">
+                <a href="#" target="_black" class="remen">24小时热门</a>
+            
+            </div>
+            <div class="tishi">
+                过去24小时,最多人看过的岗位在这里
+                <a href="#">知道了</a>
+            </div>
+            <ul id="inf">
+
+            </ul>
+          
+        </div>
+    </br>
+</br>
+    </div>
+</body>
+<script>
+    $("#inf").on("click",".k1",function (){
+        var jobId = $(this).attr("index");
+        setCookie("jobId",jobId);
+        location.href = "positiondetail.html";
+    })
+
+</script>
+</html>
